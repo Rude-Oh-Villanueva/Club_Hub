@@ -1,0 +1,40 @@
+<template name="Find_Game">
+  <div style="margin-top: 20px" class="ui container">
+
+    <h1>Look here to find people to play with</h1>
+
+    <div class="ui form">
+      <div class="field">
+        <label>Game</label>
+        <div class="ui selection simple dropdown">
+          <input name="game" type="hidden">
+          <i class="dropdown icon"></i>
+          <div class="default text">Games</div>
+          <div class="menu">
+            <div class="item" data-value="0">PC</div>
+            <div class="item" data-value="1">Playstation</div>
+            <div class="item" data-value="2">Xbox</div>
+            <div class="item" data-value="3">Tabletop</div>
+            <div class="item" data-value="4">Cards</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Game Name</th>
+        <th>Console</th>
+        <th>LAN/ONLINE</th>
+        <th>Date</th>
+        <th>Time</th>
+      </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+  </div>
+
+</template>
