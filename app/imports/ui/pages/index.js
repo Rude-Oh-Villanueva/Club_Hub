@@ -1,11 +1,8 @@
 import './home-page.html';
 
-import './find-game.html';
-import './find-game.js';
-
 import './host-game.html';
 
-import './game-list.html';
+import './club-list.html';
 
 import './faq-page.html';
 

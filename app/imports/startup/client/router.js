@@ -9,9 +9,9 @@ FlowRouter.route('/', {
 });
 
 FlowRouter.route('/game-list', {
-  name: 'Game_List',
+  name: 'Club_List',
   action() {
-    BlazeLayout.render('App_Body', { main: 'Game_List' });
+    BlazeLayout.render('App_Body', { main: 'Club_List' });
   },
 });
 
