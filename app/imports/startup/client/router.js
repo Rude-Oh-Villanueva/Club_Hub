@@ -30,6 +30,13 @@ FlowRouter.route('/host-game', {
   },
 });
 
+FlowRouter.route('/add-club-page', {
+  name: 'Add_Club',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Add_Club' });
+  },
+});
+
 FlowRouter.route('/faq-page', {
   name: 'Faq_Page',
   action() {
