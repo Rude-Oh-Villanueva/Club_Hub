@@ -1,0 +1,108 @@
+<template name="Add_Club">
+  <div style="margin-top: 20px" class="ui container">
+
+    <div class="ui form">
+      <div class="two fields">
+        <div class="field">
+          <label>Club Name</label>
+          <input placeholder="Club Name" type="text">
+        </div>
+
+        <div class="field">
+          <label>Category</label>
+          <div class="ui selection dropdown">
+            <input name="category" type="hidden">
+            <i class="dropdown icon"></i>
+            <div class="default text">Category</div>
+            <div class="menu">
+              <div class="item" data-value="7">Academic</div>
+              <div class="item" data-value="6">Atheletic</div>
+              <div class="item" data-value="5">Cultural</div>
+              <div class="item" data-value="4">Recreational</div>
+              <div class="item" data-value="3">Politcal</div>
+              <div class="item" data-value="2">Spiritual</div>
+              <div class="item" data-value="1">Service</div>
+              <div class="item" data-value="0">Student Affairs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="two fields">
+        <div class="inline fields">
+          <label for="meeting_up">How often do you meet up:</label>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input name="meeting_up" checked="" tabindex="0" class="hidden" type="radio">
+              <label>Weekly</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input name="meeting_up" tabindex="0" class="hidden" type="radio">
+              <label>Bi-Weekly</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input name="meeting_up" tabindex="0" class="hidden" type="radio">
+              <label>Monthly</label>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input tabindex="0" class="hidden" type="checkbox">
+            <label>Mon</label>
+          </div>
+          <div class="ui checkbox">
+            <input tabindex="0" class="hidden" type="checkbox">
+            <label>Tue</label>
+          </div>
+          <div class="ui checkbox">
+            <input tabindex="0" class="hidden" type="checkbox">
+            <label>Wed</label>
+          </div>
+          <div class="ui checkbox">
+            <input tabindex="0" class="hidden" type="checkbox">
+            <label>Thur</label>
+          </div>
+          <div class="ui checkbox">
+            <input tabindex="0" class="hidden" type="checkbox">
+            <label>Fri</label>
+          </div>
+          <div class="ui checkbox">
+            <input tabindex="0" class="hidden" type="checkbox">
+            <label>Sat</label>
+          </div>
+          <div class="ui checkbox">
+            <input tabindex="0" class="hidden" type="checkbox">
+            <label>Sun</label>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="field">
+        <label>Description</label>
+        <textarea rows="2"></textarea>
+      </div>
+
+      <div class="inline field">
+        <div class="ui checkbox">
+          <input tabindex="0" class="hidden" type="checkbox">
+          <label>Approved RIO</label>
+        </div>
+      </div>
+
+
+      <button class="ui submit button">Submit</button>
+
+    </div>
+
+  </div>
+
+</template>
