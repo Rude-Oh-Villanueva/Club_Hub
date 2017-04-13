@@ -1,0 +1,19 @@
+{
+  "cas": {
+    "baseUrl": "https://cas-test.its.hawaii.edu/cas/",
+    "autoClose": true
+  },
+  "public": {
+    "cas": {
+      "loginUrl": "https://cas-test.its.hawaii.edu/cas/login",
+      "serviceParam": "service",
+      "popupWidth": 810,
+      "popupHeight": 610
+    }
+  },
+  "galaxy.meteor.com": {
+    "env": {
+      "MONGO_URL": "mongodb://username:password@ds161190.mlab.com:61190/clubhub"
+    }
+  }
+}
