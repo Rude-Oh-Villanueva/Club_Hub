@@ -1,0 +1,90 @@
+<template name="Add_Club">
+    <div style="margin-top: 20px" class="ui text container segment">
+
+        <div class="ui form">
+            <form class="ui equal width form profile-data-form">
+
+
+                <div class="fields">
+                    {{> Text_Form_Control label="Club" placeholder="Club Name" required=true errorMessage=(fieldError
+                    "Club")}}
+
+                    {{> Select_Form_Control label="Category" options=category errorMessage=(fieldError "category")
+                    multiple=true }}
+                </div>
+
+                <div class="fields">
+                    <div class="grouped field">
+                        <label for="meeting_up">How often do you meet up:</label>
+
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input name="meeting_up" checked="" tabindex="0" class="hidden" type="radio">
+                                <label>Weekly</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input name="meeting_up" tabindex="0" class="hidden" type="radio">
+                                <label>Bi-Weekly</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input name="meeting_up" tabindex="0" class="hidden" type="radio">
+                                <label>Monthly</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="fields">
+                    <div class="inline field">
+                        <div class="ui checkbox">
+                            <input tabindex="0" class="hidden" type="checkbox">
+                            <label>Mon</label>
+                        </div>
+                        <div class="ui checkbox">
+                            <input tabindex="0" class="hidden" type="checkbox">
+                            <label>Tue</label>
+                        </div>
+                        <div class="ui checkbox">
+                            <input tabindex="0" class="hidden" type="checkbox">
+                            <label>Wed</label>
+                        </div>
+                        <div class="ui checkbox">
+                            <input tabindex="0" class="hidden" type="checkbox">
+                            <label>Thur</label>
+                        </div>
+                        <div class="ui checkbox">
+                            <input tabindex="0" class="hidden" type="checkbox">
+                            <label>Fri</label>
+                        </div>
+                        <div class="ui checkbox">
+                            <input tabindex="0" class="hidden" type="checkbox">
+                            <label>Sat</label>
+                        </div>
+                        <div class="ui checkbox">
+                            <input tabindex="0" class="hidden" type="checkbox">
+                            <label>Sun</label>
+                        </div>
+                    </div>
+                </div>
+
+
+                {{> TextArea_Form_Control label="Bio" value=profile.bio placeholder="Short bio statement here"
+                errorMessage=(fieldError "bio")}}
+
+                <div class="inline field">
+                    <div class="ui checkbox">
+                        <input tabindex="0" class="hidden" type="checkbox">
+                        <label>Approved RIO</label>
+                    </div>
+                </div>
+                <button class="ui submit button">Submit</button>
+
+            </form>
+        </div>
+    </div>
+</template>
