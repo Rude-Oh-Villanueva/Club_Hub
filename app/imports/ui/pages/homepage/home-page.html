@@ -1,14 +1,43 @@
 <template name="Home_Page">
-  <div class="ui middle aligned centered grid text container">
+  <div class="ninety wide column">
+    <h1>Welcome back to Club Hub, John Doe!</h1>
+    <h3>Below is the list of clubs you are following.</h3>
+    <table style ="margin-top: 25px" class="ui celled table">
+      <thead>
+      <tr>
+        <th>Club Name</th>
+        <th>Meeting days</th>
+        <th>Time</th>
+        <th>Description</th>
 
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>ACM</td>
+        <td>Tuesday</td>
+        <td>5:45-7:45 P.M.</td>
+        <td>ACM, the world's largest educational and scientific computing society, delivers resources that advance computing as a science and a profession. ACM provides the computing field's premier Digital Library and serves its members and the computing profession with leading-edge publications, conferences, and career resources. <button class="ui mini button" type="submit">Read More</button> </td>
 
-    <div class="ten wide column">
+      </tr>
+      <tr>
+        <td>Example club</td>
+        <td>Monday-Friday</td>
+        <td>5:00-8:00 A.M.</td>
+        <td>A club about giving and getting examples. <button class="ui mini button" type="submit">Read More</button> </td>
 
-      <!-- This page will be the homepage after the user logs in. Will contain a list of favorited clubs. -->
+      </tr>
+      <tr>
+        <td>Unexample club</td>
+        <td>Frida-Monday</td>
+        <td>2:00-3:00 P.M.</td>
+        <td>A club about NOT giving and getting examples.<button class="ui mini button" type="submit">Read More</button> </td>
 
-      <h1>Club Hub</h1>
-      <h3>Club Hub is an application that allows UH students to find RIO clubs at the Univesity of Hawaii at Manoa</h3>
-    </div>
+      </tr>
+
+      </tbody>
+    </table>
+
 
   </div>
 </template>
