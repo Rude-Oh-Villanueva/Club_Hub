@@ -8,32 +8,17 @@ FlowRouter.route('/', {
   },
 });
 
-FlowRouter.route('/game-list', {
-  name: 'Club_List',
-  action() {
-    BlazeLayout.render('App_Body', { main: 'Club_List' });
-  },
-});
-
-
-FlowRouter.route('/find-game', {
-  name: 'Find_Game',
-  action() {
-    BlazeLayout.render('App_Body', { main: 'Find_Game' });
-  },
-});
-
-FlowRouter.route('/host-game', {
-  name: 'Host_Game',
-  action() {
-    BlazeLayout.render('App_Body', { main: 'Host_Game' });
-  },
-});
-
 FlowRouter.route('/add-club-page', {
   name: 'Add_Club',
   action() {
     BlazeLayout.render('App_Body', { main: 'Add_Club' });
+  },
+});
+
+FlowRouter.route('/edit-club-page', {
+  name: 'Edit_Club',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Edit_Club' });
   },
 });
 

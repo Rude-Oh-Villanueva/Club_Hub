@@ -2,12 +2,10 @@
     <div class="ui top fixed borderless inverted menu">
   <div class="ui container">
       <a class="item" href="{{pathFor 'Home_Page'}}"><h1>GAME NIGHT</h1></a>
-    <a class="{{ isActiveRoute 'Club_List'}} item" href="{{pathFor 'Club_List'}}"><p>Club List</p></a>
     <a class="{{ isActiveRoute 'Add_Club'}} item" href="{{pathFor 'Add_Club'}}"><p>Add Club</p></a>
+    <a class="{{ isActiveRoute 'Edit_Club'}} item" href="{{pathFor 'Edit_Club'}}"><p>Edit Club</p></a>
     <a class="{{ isActiveRoute 'Faq_Game'}} item" href="{{pathFor 'Faq_Page'}}"><p>FAQ / CONTACT</p></a>
       {{#if currentUser}}
-        <a class="{{ isActiveRoute 'Add_Stuff_Page'}} item" href="{{ pathFor 'Add_Stuff_Page' }}">Add Stuff </a>
-        <a class="{{ isActiveRoute 'List_Stuff_Page'}} item" href="{{ pathFor 'List_Stuff_Page' }}">List Stuff</a>
       {{/if}}
       <a href="#" class="right aligned item">{{> loginButtons align="right"}} </a>
     </div>
