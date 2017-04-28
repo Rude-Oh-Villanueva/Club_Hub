@@ -7,7 +7,7 @@
 
       {{> Text_Form_Control label="Name" required=true errorMessage=(fieldError "name")}}
       {{> Checkbox_Form_Control label="Days" checkboxes=days }}
-      {{> Radio_Form_Control label="Frequency" name="frequency" required=true radios=frequencies errorMessage=(fieldError "level") }}
+      {{> Radio_Form_Control label="Frequency" name="Frequency" required=true radios=frequencies errorMessage=(fieldError "frequency") }}
       {{> Select_Form_Control label="Category" options=categories errorMessage=(fieldError "categories") multiple=true }}
       {{> TextArea_Form_Control label="Bio" placeholder="Short bio statement here" errorMessage=(fieldError "bio")}}
 

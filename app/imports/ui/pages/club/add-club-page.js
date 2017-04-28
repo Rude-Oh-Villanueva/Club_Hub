@@ -35,7 +35,7 @@ Template.Add_Club_Page.helpers({
     return _.map(dayList, function makeDayObject(day) { return { label: day }; });
   },
   frequencies() {
-    return _.map(frequencyList, function makeFrequencyObject(frequency) { return { label: frequency }; });
+    return _.map(frequencyList, function makeLevelObject(frequency) { return { label: frequency }; });
   },
   categories() {
     return _.map(categoryList, function makeCategoryObject(category) { return { label: category }; });
@@ -58,10 +58,9 @@ Template.Add_Club_Page.events({
       }
     });
     // Get frequency (radio buttons, exactly one)
-    console.log(event.target.Frequency.value);
     const frequency = event.target.Frequency.value;
     // Get Majors (multiple selection)
-    const selectedMajors = _.filter(event.target.Majors.selectedOptions, (option) => option.selected);
+    const selectedMajors = _.filter(event.target.Category.selectedOptions, (option) => option.selected);
     const categories = _.map(selectedMajors, (option) => option.value);
 
     const newClubData = { name, bio, days, frequency, categories };
