@@ -16,16 +16,16 @@ FlowRouter.route('/landing-page', {
 });
 
 FlowRouter.route('/add-club-page', {
-  name: 'Add_Club',
+  name: 'Add_Club_Page',
   action() {
-    BlazeLayout.render('App_Body', { main: 'Add_Club' });
+    BlazeLayout.render('App_Body', { main: 'Add_Club_Page' });
   },
 });
 
 FlowRouter.route('/edit-club-page', {
-  name: 'Edit_Club',
+  name: 'Edit_Club_Page',
   action() {
-    BlazeLayout.render('App_Body', { main: 'Edit_Club' });
+    BlazeLayout.render('App_Body', { main: 'Edit_Club_Page' });
   },
 });
 
