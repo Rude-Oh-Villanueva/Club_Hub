@@ -1,90 +1,19 @@
-<template name="Add_Club">
-    <div style="margin-top: 20px" class="ui text container segment">
+<template name="Add_Club_Page">
 
-        <div class="ui form">
-            <form class="ui equal width form profile-data-form">
+  <div style="margin-top: 20px" class="ui container">
 
+    <form class="ui form student-data-form  {{ successClass }} {{ errorClass }}">
+      <h4 class="ui dividing header">Student Data</h4>
 
-                <div class="fields">
-                    {{> Text_Form_Control label="Club" placeholder="Club Name" required=true errorMessage=(fieldError
-                    "Club")}}
+      {{> Text_Form_Control label="Name" required=true errorMessage=(fieldError "name")}}
+      {{> Checkbox_Form_Control label="Days" checkboxes=days }}
+      {{> Radio_Form_Control label="Frequency" name="Frequency" required=true radios=frequencies errorMessage=(fieldError "frequency") }}
+      {{> Select_Form_Control label="Category" options=categories errorMessage=(fieldError "categories") multiple=true }}
+      {{> TextArea_Form_Control label="Bio" placeholder="Short bio statement here" errorMessage=(fieldError "bio")}}
 
-                    {{> Select_Form_Control label="Category" options=category errorMessage=(fieldError "category")
-                    multiple=true }}
-                </div>
+      <button class="ui primary button" type="submit">Submit</button>
 
-                <div class="fields">
-                    <div class="grouped field">
-                        <label for="meeting_up">How often do you meet up:</label>
+    </form>
 
-                        <div class="field">
-                            <div class="ui radio checkbox">
-                                <input name="meeting_up" checked="" tabindex="0" class="hidden" type="radio">
-                                <label>Weekly</label>
-                            </div>
-                        </div>
-                        <div class="field">
-                            <div class="ui radio checkbox">
-                                <input name="meeting_up" tabindex="0" class="hidden" type="radio">
-                                <label>Bi-Weekly</label>
-                            </div>
-                        </div>
-                        <div class="field">
-                            <div class="ui radio checkbox">
-                                <input name="meeting_up" tabindex="0" class="hidden" type="radio">
-                                <label>Monthly</label>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-                <div class="fields">
-                    <div class="inline field">
-                        <div class="ui checkbox">
-                            <input tabindex="0" class="hidden" type="checkbox">
-                            <label>Mon</label>
-                        </div>
-                        <div class="ui checkbox">
-                            <input tabindex="0" class="hidden" type="checkbox">
-                            <label>Tue</label>
-                        </div>
-                        <div class="ui checkbox">
-                            <input tabindex="0" class="hidden" type="checkbox">
-                            <label>Wed</label>
-                        </div>
-                        <div class="ui checkbox">
-                            <input tabindex="0" class="hidden" type="checkbox">
-                            <label>Thur</label>
-                        </div>
-                        <div class="ui checkbox">
-                            <input tabindex="0" class="hidden" type="checkbox">
-                            <label>Fri</label>
-                        </div>
-                        <div class="ui checkbox">
-                            <input tabindex="0" class="hidden" type="checkbox">
-                            <label>Sat</label>
-                        </div>
-                        <div class="ui checkbox">
-                            <input tabindex="0" class="hidden" type="checkbox">
-                            <label>Sun</label>
-                        </div>
-                    </div>
-                </div>
-
-
-                {{> TextArea_Form_Control label="Bio" value=profile.bio placeholder="Short bio statement here"
-                errorMessage=(fieldError "bio")}}
-
-                <div class="inline field">
-                    <div class="ui checkbox">
-                        <input tabindex="0" class="hidden" type="checkbox">
-                        <label>Approved RIO</label>
-                    </div>
-                </div>
-                <button class="ui submit button">Submit</button>
-
-            </form>
-        </div>
-    </div>
+  </div>
 </template>
