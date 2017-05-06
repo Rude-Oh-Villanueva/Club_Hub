@@ -80,5 +80,13 @@ Template.Edit_Club_Page.events({
       instance.messageFlags.set(displayErrorMessages, true);
     }
   },
+  'click.delete .student-data-xform'(event,) {
+    event.preventDefault();
+
+    if(confirm("Are you sure you want to delete this?")) {
+      ClubData.remove(FlowRouter.getParam('_id'));
+      FlowTouter.go('Home_Page');
+    }
+}
 });
 
