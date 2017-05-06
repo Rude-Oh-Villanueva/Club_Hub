@@ -1,13 +1,31 @@
 <template name="Club_List">
   <div style="margin-top: 20px" class="ui container">
 
+    <h2>Club List</h2>
     {{#if Template.subscriptionsReady}}
+
+    <table style="margin-top: 20px" class="ui celled table">
+      <thead>
+      <tr>
+        <th>Name</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      {{#each club in clubList}}
+      <tr>
+        <td>{{club.name}}</td>
+      </tr>
+      {{/each}}
+      </tbody>
+    </table>
+
     <div style="margin-top: 10px" class="ui container">
 
 
         <div style="margin-top: 20px" class="ui cards">
           {{#each club in clubList }}
-
+          
           {{/each}}
         </div>
 

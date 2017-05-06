@@ -1,13 +1,13 @@
 import { Template } from 'meteor/templating';
 import { ClubData } from '../../../api/clubdata/clubdata.js';
 
-Template.List_Page.helpers({
+Template.Club_List.helpers({
 
   clubList() {
     return ClubData.find();
   },
 });
 
-Template.List_Page.onCreated(function onCreated() {
+Template.Club_List.onCreated(function onCreated() {
   this.subscribe('ClubData');
 });

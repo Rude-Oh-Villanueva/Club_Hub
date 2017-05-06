@@ -19,7 +19,7 @@ export const categoryList = ['Academic', 'Athletic', 'Cultural', 'Recreational',
 Template.Add_Club_Page.onCreated(function onCreated() {
   this.messageFlags = new ReactiveDict();
   this.messageFlags.set(displayErrorMessages, false);
-  this.context = ClubDataSchema.namedContext('Create_ClubData_Page');
+  this.context = ClubDataSchema.namedContext('Add_ClubData_Page');
 });
 
 Template.Add_Club_Page.helpers({
@@ -44,7 +44,7 @@ Template.Add_Club_Page.helpers({
 
 
 Template.Add_Club_Page.events({
-  'submit .student-data-form'(event, instance) {
+  'submit .club-data-form'(event, instance) {
     event.preventDefault();
     // Get name (text field)
     const name = event.target.Name.value;
@@ -71,10 +71,11 @@ Template.Add_Club_Page.events({
     // Determine validity.
     instance.context.validate(newClubData);
     if (instance.context.isValid()) {
-      const id = ClubData.insert(newClubData);
+      ClubData.insert(newClubData);
       instance.messageFlags.set(displayErrorMessages, false);
       instance.find('form').reset();
       instance.$('.dropdown').dropdown('restore defaults');
+      console.log('debug1');
     } else {
       instance.messageFlags.set(displayErrorMessages, true);
     }
