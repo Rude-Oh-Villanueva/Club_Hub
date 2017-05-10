@@ -1,38 +1,33 @@
 <template name="Club_List">
-  <div style="margin-top: 20px" class="ui container">
 
-    <h2>Club List</h2>
-    {{#if Template.subscriptionsReady}}
+    <div class="ui text container">
+      {{#if Template.subscriptionsReady}}
+      <table style="margin-top: 18px" class="ui celled table">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Bio</th>
+          <th>Days</th>
+          <th>Frequency</th>
+          <th>Category</th>
+        </tr>
+        </thead>
 
-    <table style="margin-top: 20px" class="ui celled table">
-      <thead>
-      <tr>
-        <th>Name</th>
-      </tr>
-      </thead>
-
-      <tbody>
-      {{#each club in clubList}}
-      <tr>
-        <td>{{club.name}}</td>
-      </tr>
-      {{/each}}
-      </tbody>
-    </table>
-
-    <div style="margin-top: 10px" class="ui container">
-
-
-        <div style="margin-top: 20px" class="ui cards">
-          {{#each club in clubList }}
-          
-          {{/each}}
-        </div>
-
-
+        <tbody>
+        {{#each club in clubList}}
+        <tr>
+          <td>{{club.name}}</td>
+          <td>{{club.bio}}</td>
+          <td>{{club.days}}</td>
+          <td>{{club.frequency}}</td>
+          <td>{{club.categories}}</td>
+        </tr>
+        {{/each}}
+        </tbody>
+      </table>
+      {{else}}
+      {{> Loading}}
+      {{/if}}
     </div>
-    {{/if}}
-
-  </div>
 
 </template>
