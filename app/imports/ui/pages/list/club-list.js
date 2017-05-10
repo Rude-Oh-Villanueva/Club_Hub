@@ -3,12 +3,11 @@ import { ClubData } from '../../../api/clubdata/clubdata.js';
 
 Template.Club_List.helpers({
 
-  clubData() {
-    return ClubData.findAll();
+  /**
+   * @returns {*} All of the Stuff documents.
+   */
+  clubList() {
+    return ClubData.find();
   },
 
-});
-
-Template.Club_List.onCreated(function onCreated() {
-  this.subscribe('ClubData');
 });
