@@ -71,11 +71,10 @@ Template.Add_Club_Page.events({
     // Determine validity.
     instance.context.validate(newClubData);
     if (instance.context.isValid()) {
-      ClubData.insert(newClubData);
+      const id = ClubData.insert(newClubData);
       instance.messageFlags.set(displayErrorMessages, false);
       instance.find('form').reset();
       instance.$('.dropdown').dropdown('restore defaults');
-      console.log('debug1');
     } else {
       instance.messageFlags.set(displayErrorMessages, true);
     }

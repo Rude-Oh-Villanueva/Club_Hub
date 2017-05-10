@@ -10,6 +10,7 @@
           <th>Days</th>
           <th>Frequency</th>
           <th>Category</th>
+          <th>Edit</th>
         </tr>
         </thead>
 
@@ -21,6 +22,7 @@
           <td>{{club.days}}</td>
           <td>{{club.frequency}}</td>
           <td>{{club.categories}}</td>
+          <td><a href="{{pathFor 'Edit_Club_Page' _id=club._id}}">Edit</a></td>
         </tr>
         {{/each}}
         </tbody>

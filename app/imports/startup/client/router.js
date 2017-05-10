@@ -22,7 +22,7 @@ FlowRouter.route('/add-club-page', {
   },
 });
 
-FlowRouter.route('/edit-club-page', {
+FlowRouter.route('/edit-club-page/:_id', {
   name: 'Edit_Club_Page',
   action() {
     BlazeLayout.render('App_Body', { main: 'Edit_Club_Page' });
