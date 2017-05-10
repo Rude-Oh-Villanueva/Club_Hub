@@ -1,62 +1,38 @@
 <template name="Club_List">
   <div style="margin-top: 20px" class="ui container">
 
-    <div class="ui cards">
-      <div class="card">
-        <div class="content">
-          <div class="header">Club Name</div>
-          <div class="description">Club Type</div>
-          <br>
-          <div class="description">Meeting Date</div>
-        </div>
-        <div class="ui bottom attached button">
-          <i class="add icon"></i>
-          Register
-        </div>
-      </div>
-      <div class="card">
-        <div class="content">
-          <div class="header">Club Name</div>
-          <div class="description">Club Type</div>
-          <br>
-          <div class="description">Meeting Date</div>
-        </div>
-        <div class="ui bottom attached button">
-          <i class="add icon"></i>
-          Register
-        </div>
-      </div>
-      <div class="card">
-        <div class="content">
-          <div class="header">Club Name</div>
-          <div class="description">Club Type</div>
-          <br>
-          <div class="description">Meeting Date</div>
-        </div>
-        <div class="ui bottom attached button">
-          <i class="add icon"></i>
-          Register
-        </div>
-      </div>
-    </div>
-<!--
-    <table class="table">
+    <h2>Club List</h2>
+    {{#if Template.subscriptionsReady}}
+
+    <table style="margin-top: 20px" class="ui celled table">
       <thead>
       <tr>
-        <th>Club Name</th>
-        <th>Club Type</th>
-        <th>Meeting Date</th>
-        <th>Registered/Unregistered</th>
+        <th>Name</th>
       </tr>
       </thead>
+
       <tbody>
-      <td>Test Club</td>
-      <td>Academic</td>
-      <td>Bi-weekly : M</td>
-      <td>Registered</td>
+      {{#each club in clubList}}
+      <tr>
+        <td>{{club.name}}</td>
+      </tr>
+      {{/each}}
       </tbody>
     </table>
--->
+
+    <div style="margin-top: 10px" class="ui container">
+
+
+        <div style="margin-top: 20px" class="ui cards">
+          {{#each club in clubList }}
+          
+          {{/each}}
+        </div>
+
+
+    </div>
+    {{/if}}
+
   </div>
 
 </template>
