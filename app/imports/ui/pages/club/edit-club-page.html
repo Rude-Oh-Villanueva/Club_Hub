@@ -1,15 +1,17 @@
 <template name="Edit_Club_Page">
-
+  {{#if Template.subscriptionsReady}}
   <div style="margin-top: 20px" class="ui container">
 
     <form class="ui form student-data-form  {{ successClass }} {{ errorClass }}">
-      <h4 class="ui dividing header">Student Data</h4>
+      <h4 class="ui dividing header">Edit Club Data</h4>
 
-      {{> Text_Form_Control label="Name" required=true errorMessage=(fieldError "name")}}
+      {{> Text_Form_Control label="Name" required=true  value=(clubDataField 'name') errorMessage=(fieldError "name")}}
       {{> Checkbox_Form_Control label="Days" checkboxes=days }}
-      {{> Radio_Form_Control label="Frequency" name="frequency" required=true radios=frequencies errorMessage=(fieldError "level") }}
-      {{> Select_Form_Control label="Category" options=categories errorMessage=(fieldError "categories") multiple=true }}
-      {{> TextArea_Form_Control label="Bio" placeholder="Short bio statement here" errorMessage=(fieldError "bio")}}
+      {{> Radio_Form_Control label="Frequency" name="frequency" required=true radios=frequencies
+      errorMessage=(fieldError "level") }}
+      {{> Select_Form_Control label="Category" options=categories errorMessage=(fieldError "categories") multiple=true
+      }}
+      {{> TextArea_Form_Control label="Bio" value=(clubDataField 'name') placeholder="Short bio statement here" errorMessage=(fieldError "bio")}}
 
       <button class="ui primary button" type="submit">Update</button>
       <button class="ui red button" type="submit">Delete</button>
@@ -17,4 +19,5 @@
     </form>
 
   </div>
+  {{/if}}
 </template>
