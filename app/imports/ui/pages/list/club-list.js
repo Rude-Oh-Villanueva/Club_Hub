@@ -3,9 +3,10 @@ import { ClubData } from '../../../api/clubdata/clubdata.js';
 
 Template.Club_List.helpers({
 
-  clubList() {
-    return ClubData.find();
+  clubData() {
+    return ClubData.findAll();
   },
+
 });
 
 Template.Club_List.onCreated(function onCreated() {
